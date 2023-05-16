@@ -30,19 +30,23 @@
 
 - Docker & docker-compose
 
-````bash
+- Copie du fichier d'environement :
+
+```bash
 $ cp .env
+```
 
 ## Installation via Docker
 
 ```bash
 $ docker-compose up (--build)
+```
 
 ## Installation
 
 ```bash
 $ pnpm install
-````
+```
 
 ## Running the app
 
