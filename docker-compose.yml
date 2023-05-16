@@ -10,18 +10,18 @@ services:
       - 27017:27017
     volumes:
       - gallery:/data/db
-  # api: 
-  #   build: .
-  #   volumes:
-  #     - .:/app
-  #     - /app/node_modules
-  #   ports:
-  #     - ${APP_PORT}:${APP_PORT}
-  #   command: npm run start:dev
-  #   env_file:
-  #     - .env
-  #   depends_on:
-  #     - mongodb
+  api:
+    build: .
+    volumes:
+      - .:/app
+      - /app/node_modules
+    ports:
+      - ${APP_PORT}:${APP_PORT}
+    command: npm run start:dev
+    env_file:
+      - .env
+    depends_on:
+      - mongodb
 volumes:
   gallery:
 networks:
