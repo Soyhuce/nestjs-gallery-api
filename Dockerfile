@@ -12,8 +12,11 @@ COPY package.json pnpm-lock.yaml ./
 
 # Install app dependencies
 RUN pnpm install --frozen-lockfile --prod
-# Bundle app source
 
+# Bundle app source
 COPY . .
+
 # Creates a "dist" folder with the production build
 RUN pnpm build
+
+CMD [ "node", "dist/main.js" ]

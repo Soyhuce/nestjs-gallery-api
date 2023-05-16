@@ -5,7 +5,7 @@ import { MongooseModule } from '@nestjs/mongoose';
 @Module({
   imports: [
     GalleryModule,
-    MongooseModule.forRoot('mongodb://mongodb:27017/gallery_api'),
+    MongooseModule.forRoot('mongodb://mongodb/gallery_api'),
   ],
   controllers: [],
   providers: [],
